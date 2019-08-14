@@ -9,6 +9,7 @@
 <form method="post">
     <?php //echo time() ?>
     <div>
+        <script src="1.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <input class="textview" type="text" id="content" name="content" value="<?php echo $res2 ?>">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -45,34 +46,44 @@
         <input type="button" value="/" class="buton">
         <input type="button" value="C" class="del">
     </div>
-    <script type="text/javascript">
-
-        $('.res').on('click', function () {
-            $.ajax({
-                method: "POST",
-                url: "post.php",
-                data: {
-                    'content': $('#content').val()
-                },
-                success: function (result) {
-                    $('#content').val(result);
-                }
-            });
-
-        });
-
-        $('.buton').on('click', function () {
-            var butonval = $(this).val();
-            var inputvalue = $('#content').val();
-            var newvalue = inputvalue + butonval;
-            $('#content').val(newvalue);
-        });
-
-        $('.del').on('click', function () {
-            $('#content').val('');
-        })
-
-    </script>
+<!--    <script type="text/javascript">-->
+<!---->
+<!--        $('.res').on('click', function () {-->
+<!--        //     $.ajax({-->
+<!--        //         method: "POST",-->
+<!--        //         url: "post.php",-->
+<!--        //         data: {-->
+<!--        //             'content': $('#content').val()-->
+<!--        //         },-->
+<!--        //         success: function (result) {-->
+<!--        //             $('#content').val(result);-->
+<!--        //         }-->
+<!--        //     });-->
+<!--        //-->
+<!--        // });-->
+<!--        //-->
+<!--        // $('.buton').on('click', function () {-->
+<!--        //     var butonval = $(this).val();-->
+<!--        //     var inputvalue = $('#content').val();-->
+<!--        //     var newvalue = inputvalue + butonval;-->
+<!--        //     $('#content').val(newvalue);-->
+<!--        // });-->
+<!--        //-->
+<!--        // $('.del').on('click', function () {-->
+<!--        //     $('#content').val('');-->
+<!--        // })-->
+<!---->
+<!--            $.ajax({-->
+<!--                method: "GET",-->
+<!--                url: "post.php",-->
+<!---->
+<!--                success: function (result) {-->
+<!--                    console.log (result);-->
+<!--                }-->
+<!--            });-->
+<!---->
+<!---->
+<!--    </script>-->
 
 
 </form>
